@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="947.0" style="-fx-background-color: #fbb242;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.movidleguessinggame.MovidleController">
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <center>
+      <VBox fx:id="mainVBox" alignment="TOP_CENTER" prefHeight="567.0" prefWidth="937.0" spacing="10.0" style="-fx-background-color: #fbb042;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" cacheShape="false" prefHeight="100.0" prefWidth="200.0" scaleShape="false" spacing="15.0">
+               <children>
+                  <ChoiceBox fx:id="choiceBoxMovie" prefHeight="25.0" prefWidth="100.0" />
+                  <TextField fx:id="txtGuess" onAction="#txtGuessSetOn" onMouseClicked="#txtChanged" prefHeight="40.0" prefWidth="445.0" style="-fx-background-color: #F6DAB1;" text="Please enter the name of the movie you are guessing...">
+                     <font>
+                        <Font name="Serif Regular" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btnGuess" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#btnGuessSetOn" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #F6DAB1;" text="Guess" textFill="#38230d">
+                     <font>
+                        <Font name="Serif Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox fx:id="HBoxInfo" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="937.0" spacing="5.0" visible="false">
+               <children>
+                  <Label fx:id="lblName" alignment="CENTER" prefHeight="16.0" prefWidth="80.0" text="Image" textFill="#38230d">
+                     <font>
+                        <Font name="Serif Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="419.0" layoutY="10.0" prefWidth="120.0" text="Name" textFill="#38230d">
+                     <font>
+                        <Font name="Serif Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="354.0" layoutY="10.0" prefWidth="120.0" text="Year" textFill="#38230d">
+                     <font>
+                        <Font name="Serif Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="289.0" layoutY="10.0" prefWidth="120.0" text="Genre" textFill="#38230d">
+                     <font>
+                        <Font name="Serif Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="224.0" layoutY="10.0" prefWidth="120.0" text="Origin" textFill="#38230d">
+                     <font>
+                        <Font name="Serif Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="159.0" layoutY="10.0" prefWidth="120.0" text="Director" textFill="#38230d">
+                     <font>
+                        <Font name="Serif Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblName1" alignment="CENTER" layoutX="94.0" layoutY="10.0" prefWidth="120.0" text="Star" textFill="#38230d">
+                     <font>
+                        <Font name="Serif Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox alignment="CENTER" cacheShape="false" prefHeight="107.0" prefWidth="937.0" scaleShape="false" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imgGame" fitHeight="105.0" fitWidth="479.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@movidleGuessingGame.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="BASELINE_CENTER" prefHeight="35.0" prefWidth="937.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnClose" mnemonicParsing="false" onAction="#btnCloseSetOn" prefHeight="21.0" prefWidth="119.0" style="-fx-background-color: #F6DAB1;" text="Close" textFill="#38230d">
+               <font>
+                  <Font name="Serif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnRestart" layoutX="419.0" layoutY="17.0" mnemonicParsing="false" onAction="#btnRestartSetOn" prefHeight="21.0" prefWidth="119.0" style="-fx-background-color: #F6DAB1;" text="Restart" textFill="#38230d">
+               <font>
+                  <Font name="Serif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnGameRules" layoutX="484.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnGameRulesSetOn" prefHeight="21.0" prefWidth="119.0" style="-fx-background-color: #F6DAB1;" text="Game Rules" textFill="#38230d">
+               <font>
+                  <Font name="Serif Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </bottom>
+</BorderPane>
